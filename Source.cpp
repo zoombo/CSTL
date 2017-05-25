@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <stdlib.h>
 #include <thr\threads.h>
 #include <stddef.h>
@@ -46,7 +46,7 @@ void main(void) {
 		i++;
 		i++;
 		i = i + i;
-		printf("i = 5; i++; i++; i = i + i; : %d\n", i); // Åáàòü ìîé ìîçã... Äâàæäû...
+		printf("i = 5; i++; i++; i = i + i; : %d\n", i); // Ð•Ð±Ð°Ñ‚ÑŒ Ð¼Ð¾Ð¹ Ð¼Ð¾Ð·Ð³... Ð”Ð²Ð°Ð¶Ð´Ñ‹...
 	}
 	if (!RUN) {
 		int num;
@@ -116,7 +116,7 @@ void main(void) {
 
 	if (!RUN) {
 
-		//printf("%d", TESTDEFF); nl; // Íå ðàáîòàåò.
+		//printf("%d", TESTDEFF); nl; // ÐÐµ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚.
 
 	}
 
@@ -132,7 +132,7 @@ void main(void) {
 				// printf("%d : ", **(testarr1 + i)); // ???
 				// printf("%d : ", *((int*)testarr1 + i)); // ???!!!
 
-		// ß âðóáèëñÿ! Ïðè ïðèáàâëåíèè ê óêàçàòåëþ íà äâóõìåðíûé ìàññèâ, ïðèáàâëÿåòñÿ äëèííà ñòðîêè! 
+		// Ð¯ Ð²Ñ€ÑƒÐ±Ð¸Ð»ÑÑ! ÐŸÑ€Ð¸ Ð¿Ñ€Ð¸Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ð¸ Ðº ÑƒÐºÐ°Ð·Ð°Ñ‚ÐµÐ»ÑŽ Ð½Ð° Ð´Ð²ÑƒÑ…Ð¼ÐµÑ€Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð², Ð¿Ñ€Ð¸Ð±Ð°Ð²Ð»ÑÐµÑ‚ÑÑ Ð´Ð»Ð¸Ð½Ð½Ð° ÑÑ‚Ñ€Ð¾ÐºÐ¸! 
 		// *(testarr1 + i)  =  ((int)testarr1 + (sizeof(int) * 6) * i)
 		// ^_^ 
 
@@ -356,7 +356,7 @@ void main(void) {
 
 		c = "lq";
 		ip = c;
-		printf("%c", *(char*)((void*)ip)); nl; // Çàáûë ÷òî void íåëüçÿ ðàçûìåíîâûâàòü.
+		printf("%c", *(char*)((void*)ip)); nl; // Ð—Ð°Ð±Ñ‹Ð» Ñ‡Ñ‚Ð¾ void Ð½ÐµÐ»ÑŒÐ·Ñ Ñ€Ð°Ð·Ñ‹Ð¼ÐµÐ½Ð¾Ð²Ñ‹Ð²Ð°Ñ‚ÑŒ.
 
 	}
 
@@ -379,7 +379,7 @@ void main(void) {
 		int *p;
 		p = (int*)&d;
 		r = *p;
-		// r = *((double*)p); // À òàê íîðì.
+		// r = *((double*)p); // Ð Ñ‚Ð°Ðº Ð½Ð¾Ñ€Ð¼.
 		printf("%f", r); nl;
 
 		char *tmp = (char*)&d;
@@ -404,13 +404,13 @@ void main(void) {
 		printf("int*:\t\t\t%d   ", i++); printf("%d   ", i++); printf("%d   ", i++); printf("%d   ", i++); nl;
 		printf("long long*:\t\t%d   ", ll++); printf("%d   ", ll++); printf("%d   ", ll++); printf("%d   ", ll++); nl;
 		printf("long long* += short:\t%d   ", ll += si); printf("%d   ", ll += si); printf("%d   ", ll += si); printf("%d   ", ll += si); nl;
-		// printf("void*:\t\t%d   ", vd++); printf("%d   ", vd++); // À õóé òàì! Ê void* àäðåñíàÿ àðèôìåòèêà íå ïðèìåíèìà :'(
+		// printf("void*:\t\t%d   ", vd++); printf("%d   ", vd++); // Ð Ñ…ÑƒÐ¹ Ñ‚Ð°Ð¼! Ðš void* Ð°Ð´Ñ€ÐµÑÐ½Ð°Ñ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸ÐºÐ° Ð½Ðµ Ð¿Ñ€Ð¸Ð¼ÐµÐ½Ð¸Ð¼Ð° :'(
 		printf("char** += short:\t%d   ", chpp += si); printf("%d   ", chpp += si); printf("%d   ", chpp += si); printf("%d   ", chpp += si); nl;
 
 	}
 
 	if (RUN) {
-		// Ìàññèâ óêàçàòåëåé íà ôóíêöèè (ôóíêöèè ñ ïðîòîòèïîì êàê ó printf).
+		// ÐœÐ°ÑÑÐ¸Ð² ÑƒÐºÐ°Ð·Ð°Ñ‚ÐµÐ»ÐµÐ¹ Ð½Ð° Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸ (Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸ Ñ Ð¿Ñ€Ð¾Ñ‚Ð¾Ñ‚Ð¸Ð¿Ð¾Ð¼ ÐºÐ°Ðº Ñƒ printf).
 		typedef int(*funcs_ptrs)(const char*, ...);
 
 		funcs_ptrs funcs_arr[10];
@@ -440,7 +440,7 @@ void TransformPP(struct Person **Pp) {
 	(*Pp)->name = "Dimasik";
 }
 
-// Ðåêóðñèâíîå íàõîæäåíèå îñòàòêà îò äåëåíèÿ ïî ìîäóëþ.
+// Ð ÐµÐºÑƒÑ€ÑÐ¸Ð²Ð½Ð¾Ðµ Ð½Ð°Ñ…Ð¾Ð¶Ð´ÐµÐ½Ð¸Ðµ Ð¾ÑÑ‚Ð°Ñ‚ÐºÐ° Ð¾Ñ‚ Ð´ÐµÐ»ÐµÐ½Ð¸Ñ Ð¿Ð¾ Ð¼Ð¾Ð´ÑƒÐ»ÑŽ.
 int divi(int number, int divisor) {
 	int result = number;
 	if (number >= divisor) {

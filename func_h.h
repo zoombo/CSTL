@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -51,7 +51,7 @@ struct errstruct human_testerrret() {
 	errstruct_construct(&iserr);
 	iserr.errnum = 105;
 	iserr.message = "Aha";
-	return iserr; // Да, в вызывающую функцию вернется копия этой структуры с сохраненными значениями полей.
+	return iserr; // Р”Р°, РІ РІС‹Р·С‹РІР°СЋС‰СѓСЋ С„СѓРЅРєС†РёСЋ РІРµСЂРЅРµС‚СЃСЏ РєРѕРїРёСЏ СЌС‚РѕР№ СЃС‚СЂСѓРєС‚СѓСЂС‹ СЃ СЃРѕС…СЂР°РЅРµРЅРЅС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё РїРѕР»РµР№.
 }
 
 
